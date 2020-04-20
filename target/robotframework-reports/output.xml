@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 2.8.7 (Jython 2.5.3 on java11.0.6)" generated="20200420 23:41:32.478">
+<suite source="/home/apaulin/eclipse-workspace/project-testsuite/src/test/robotframework/acceptance" name="Acceptance" id="s1">
+<suite source="/home/apaulin/eclipse-workspace/project-testsuite/src/test/robotframework/acceptance/quickstart.robot" name="Quickstart" id="s1-s1">
+<kw type="setup" name="Start Session">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Init">
+<doc></doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<status endtime="20200420 23:41:36.290" starttime="20200420 23:41:33.420" status="PASS"></status>
+</kw>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Start Transaction">
+<doc></doc>
+<arguments>
+<arg>running</arg>
+<arg>read_write</arg>
+<arg>private</arg>
+<arg>test</arg>
+<arg>reuse</arg>
+</arguments>
+<status endtime="20200420 23:41:36.433" starttime="20200420 23:41:36.299" status="PASS"></status>
+</kw>
+<status endtime="20200420 23:41:36.435" starttime="20200420 23:41:33.397" status="PASS"></status>
+</kw>
+<test name="Quickstart API" id="s1-s1-t1">
+<kw type="kw" name="Show devices config">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${config} = com.apaulin.nso_controller.NSOController.Show Config">
+<doc></doc>
+<arguments>
+<arg>/devices</arg>
+</arguments>
+<msg level="INFO" timestamp="20200420 23:41:36.476">${config} = devices {
+    global-settings {
+        trace-dir /var/log/ncs;
+    }
+    mib-group snmp {
+        mib-module [ SNMP* ];
+    }
+}
+</msg>
+<status endtime="20200420 23:41:36.476" starttime="20200420 23:41:36.448" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${config}</arg>
+</arguments>
+<status endtime="20200420 23:41:36.498" starttime="20200420 23:41:36.484" status="PASS"></status>
+</kw>
+<status endtime="20200420 23:41:36.505" starttime="20200420 23:41:36.442" status="PASS"></status>
+</kw>
+<kw type="kw" name="Show Schema">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${schema} = com.apaulin.nso_controller.NSOController.Get Model">
+<doc></doc>
+<arguments>
+<arg>/aaa/authentication/users/user</arg>
+</arguments>
+<msg level="INFO" timestamp="20200420 23:41:36.566">${schema} = {"data":{"min_elements":0,"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"children":[{"access":{"read":true,"create":false,"update":false,"delete":false,"execute":fal...</msg>
+<status endtime="20200420 23:41:36.565" starttime="20200420 23:41:36.519" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${schema}</arg>
+</arguments>
+<status endtime="20200420 23:41:36.587" starttime="20200420 23:41:36.573" status="PASS"></status>
+</kw>
+<status endtime="20200420 23:41:36.589" starttime="20200420 23:41:36.510" status="PASS"></status>
+</kw>
+<kw type="kw" name="Create User">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Create">
+<doc></doc>
+<arguments>
+<arg>/aaa/authentication/users/user{test}</arg>
+</arguments>
+<status endtime="20200420 23:41:36.622" starttime="20200420 23:41:36.604" status="PASS"></status>
+</kw>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Set Value">
+<doc></doc>
+<arguments>
+<arg>/aaa/authentication/users/user{test}/uid</arg>
+<arg>5</arg>
+</arguments>
+<status endtime="20200420 23:41:36.636" starttime="20200420 23:41:36.625" status="PASS"></status>
+</kw>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Set Value">
+<doc></doc>
+<arguments>
+<arg>/aaa/authentication/users/user{test}/gid</arg>
+<arg>5</arg>
+</arguments>
+<status endtime="20200420 23:41:36.670" starttime="20200420 23:41:36.638" status="PASS"></status>
+</kw>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Set Value">
+<doc></doc>
+<arguments>
+<arg>/aaa/authentication/users/user{test}/password</arg>
+<arg>cisco</arg>
+</arguments>
+<status endtime="20200420 23:41:36.716" starttime="20200420 23:41:36.672" status="PASS"></status>
+</kw>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Set Value">
+<doc></doc>
+<arguments>
+<arg>/aaa/authentication/users/user{test}/ssh_keydir</arg>
+<arg>/home/test/.ssh</arg>
+</arguments>
+<status endtime="20200420 23:41:36.727" starttime="20200420 23:41:36.717" status="PASS"></status>
+</kw>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Set Value">
+<doc></doc>
+<arguments>
+<arg>/aaa/authentication/users/user{test}/homedir</arg>
+<arg>/home/test</arg>
+</arguments>
+<status endtime="20200420 23:41:36.742" starttime="20200420 23:41:36.729" status="PASS"></status>
+</kw>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Commit">
+<doc></doc>
+<arguments>
+</arguments>
+<status endtime="20200420 23:41:36.804" starttime="20200420 23:41:36.743" status="PASS"></status>
+</kw>
+<status endtime="20200420 23:41:36.805" starttime="20200420 23:41:36.592" status="PASS"></status>
+</kw>
+<kw type="kw" name="List Keys">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="${list_key} = com.apaulin.nso_controller.NSOController.Get List Keys">
+<doc></doc>
+<arguments>
+<arg>/aaa/authentication/users/user</arg>
+</arguments>
+<msg level="INFO" timestamp="20200420 23:41:36.839">${list_key} = {"keys":[["test"],["tutu"]],"total_count":2,"lh":-1}</msg>
+<status endtime="20200420 23:41:36.839" starttime="20200420 23:41:36.810" status="PASS"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Log To Console">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${list_key}</arg>
+</arguments>
+<status endtime="20200420 23:41:36.844" starttime="20200420 23:41:36.841" status="PASS"></status>
+</kw>
+<status endtime="20200420 23:41:36.846" starttime="20200420 23:41:36.807" status="PASS"></status>
+</kw>
+<kw type="kw" name="Delete User">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Delete">
+<doc></doc>
+<arguments>
+<arg>/aaa/authentication/users/user{test}</arg>
+</arguments>
+<status endtime="20200420 23:41:36.880" starttime="20200420 23:41:36.864" status="PASS"></status>
+</kw>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Commit">
+<doc></doc>
+<arguments>
+</arguments>
+<status endtime="20200420 23:41:36.928" starttime="20200420 23:41:36.881" status="PASS"></status>
+</kw>
+<status endtime="20200420 23:41:36.930" starttime="20200420 23:41:36.848" status="PASS"></status>
+</kw>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Sync From">
+<doc></doc>
+<arguments>
+</arguments>
+<status endtime="20200420 23:41:36.970" starttime="20200420 23:41:36.934" status="PASS"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20200420 23:41:36.972" starttime="20200420 23:41:36.437" status="PASS"></status>
+</test>
+<kw type="teardown" name="com.apaulin.nso_controller.NSOController.Logout">
+<doc></doc>
+<arguments>
+</arguments>
+<status endtime="20200420 23:41:37.025" starttime="20200420 23:41:36.986" status="PASS"></status>
+</kw>
+<doc>NSO controller test quickstart</doc>
+<metadata>
+<item name="Version">1.0</item>
+</metadata>
+<status endtime="20200420 23:41:37.032" starttime="20200420 23:41:33.060" status="PASS"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status endtime="20200420 23:41:37.052" starttime="20200420 23:41:32.506" status="PASS"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" name="Acceptance" id="s1">Acceptance</stat>
+<stat pass="1" fail="0" name="Quickstart" id="s1-s1">Acceptance.Quickstart</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
