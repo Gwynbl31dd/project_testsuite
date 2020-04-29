@@ -28,12 +28,12 @@ mvn integration-test
 
 ## Where are the tests ?
 
-By the default the test are in src/test/robotframework/acceptance/ 
+By default the tests are in src/test/robotframework/acceptance/ 
 (But you can modify that in pom.xml)
 
 Use the quickstart if you are lost :) 
 
-## How can I had other libraries?
+## How can I had more libraries?
 
 Simply modify pom.xml
 
