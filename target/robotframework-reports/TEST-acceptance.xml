@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite failures="0" skip="0" tests="1" name="Acceptance" errors="0">
-<testcase classname="Acceptance.Quickstart" name="Quickstart API" time="1">
+<testcase classname="Acceptance.Quickstart" name="Quickstart API" time="2">
 </testcase>
 </testsuite>

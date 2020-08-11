@@ -17,7 +17,9 @@ Suite TearDown   Logout
 *** Test Cases ***
 
 Quickstart API
+    Set Log level  trace
     Show devices config
+    Load Data
     Show Schema
     Create User
     List Keys
@@ -26,6 +28,11 @@ Quickstart API
     
 *** Keywords ***
 
+Load Data
+    Load  /devices  target/test-classes/device.json
+    ${out}  Dry Run
+    Log To Console  ${out}
+    
 Start Session
     Init   ${URL}  ${USERNAME}  ${PASSWORD} 
     Start Transaction  running  read_write  private  test  reuse
@@ -39,12 +46,12 @@ Show Schema
     Log To Console  ${schema}
     
 Create User
-    Create     /aaa/authentication/users/user{test}
-    Set Value  /aaa/authentication/users/user{test}/uid         5
-    Set Value  /aaa/authentication/users/user{test}/gid         5
-    Set Value  /aaa/authentication/users/user{test}/password    cisco
-    Set Value  /aaa/authentication/users/user{test}/ssh_keydir  /home/test/.ssh
-    Set Value  /aaa/authentication/users/user{test}/homedir     /home/test
+    Create     /aaa/authentication/users/user{test3}
+    Set Value  /aaa/authentication/users/user{test3}/uid         5
+    Set Value  /aaa/authentication/users/user{test3}/gid         5
+    Set Value  /aaa/authentication/users/user{test3}/password    cisco
+    Set Value  /aaa/authentication/users/user{test3}/ssh_keydir  /home/test3/.ssh
+    Set Value  /aaa/authentication/users/user{test3}/homedir     /home/test3
     Commit
     
 List Keys
@@ -52,7 +59,9 @@ List Keys
     Log To Console  ${list_key}
     
 Delete User
-    Delete    /aaa/authentication/users/user{test}
+    Delete    /aaa/authentication/users/user{test3}
+    ${out}  Dry Run
+    Log To Console  ${out}
     Commit
     
   
