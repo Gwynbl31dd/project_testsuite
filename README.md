@@ -1,12 +1,12 @@
 # Project Test Suite Template
 
-This maven project is a test suite template made to test NSO
+This maven project is a test suite template made to test NSO (mostly)
 
 No need to install any extra dependency... maven will handle it.
 
 ## Usage
 
-The installation is easy (3 commands)
+The installation is easy (2-3 commands)
 
 Simply clone this repository
 
@@ -28,11 +28,12 @@ mvn integration-test
 
 ## Where are the tests ?
 
-By the default the test are in src/test/robotframework/acceptance/
+By default the tests are in src/test/robotframework/acceptance/ 
+(But you can modify that in pom.xml)
 
 Use the quickstart if you are lost :) 
 
-## How can I had other libraries?
+## How can I had more libraries?
 
 Simply modify pom.xml
 
