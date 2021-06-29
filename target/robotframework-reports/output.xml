@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 2.8.7 (Jython 2.5.3 on java11.0.8)" generated="20200812 09:51:54.043">
+<robot generator="Robot 2.8.7 (Jython 2.5.3 on java14.0.2)" generated="20210629 15:13:17.490">
 <suite source="/home/apaulin/eclipse-workspace/project-testsuite/src/test/robotframework/acceptance" name="Acceptance" id="s1">
 <suite source="/home/apaulin/eclipse-workspace/project-testsuite/src/test/robotframework/acceptance/quickstart.robot" name="Quickstart" id="s1-s1">
 <kw type="setup" name="Start Session">
@@ -13,322 +13,78 @@
 <arg>${USERNAME}</arg>
 <arg>${PASSWORD}</arg>
 </arguments>
-<status endtime="20200812 09:51:56.621" starttime="20200812 09:51:54.662" status="PASS"></status>
+<msg level="FAIL" timestamp="20210629 15:13:21.136">NSOException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused</msg>
+<status endtime="20210629 15:13:21.141" starttime="20210629 15:13:19.581" status="FAIL"></status>
 </kw>
-<kw type="kw" name="com.apaulin.nso_controller.NSOController.Start Transaction">
-<doc></doc>
-<arguments>
-<arg>running</arg>
-<arg>read_write</arg>
-<arg>private</arg>
-<arg>test</arg>
-<arg>reuse</arg>
-</arguments>
-<status endtime="20200812 09:51:56.751" starttime="20200812 09:51:56.624" status="PASS"></status>
-</kw>
-<status endtime="20200812 09:51:56.753" starttime="20200812 09:51:54.657" status="PASS"></status>
+<status endtime="20210629 15:13:21.151" starttime="20210629 15:13:19.555" status="FAIL"></status>
 </kw>
 <test name="Quickstart API" id="s1-s1-t1">
-<kw type="kw" name="BuiltIn.Set Log Level">
-<doc>Sets the log threshold to the specified level and returns the old level.</doc>
-<arguments>
-<arg>trace</arg>
-</arguments>
-<msg level="INFO" timestamp="20200812 09:51:56.775">Log level changed from INFO to TRACE</msg>
-<msg level="TRACE" timestamp="20200812 09:51:56.776">Return: 'INFO'</msg>
-<status endtime="20200812 09:51:56.776" starttime="20200812 09:51:56.769" status="PASS"></status>
-</kw>
-<kw type="kw" name="Show devices config">
-<doc></doc>
-<arguments>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:56.779">Arguments: [  ]</msg>
-<kw type="kw" name="${config} = com.apaulin.nso_controller.NSOController.Show Config">
-<doc></doc>
-<arguments>
-<arg>/devices</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:56.782">Arguments: [ u'/devices' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.136">Return: u'devices {\n    global-settings {\n        trace-dir /var/log/ncs;\n    }\n    authgroups {\n        group default {\n            default-map {\n                remote-name     admin;\n                remote-password $8$ahuIeC3+kx4JiQwtN8tsL5IFiyET6I5asUBqcFWb4/w=;\n            }\n        }\n    }\n    mib-group snmp {\n        mib-module [ SNMP* ];\n    }\n    device c0 {\n        address   127.0.0.1;\n        port      10022;\n        ssh {\n            host-key ssh-rsa {\n                key-data "AAAAB3NzaC1yc2EAAAADAQABAAABAQCcZFjOeQHj0mrs1D7VYn5PKaIRzALhXfZ59QuOhwdI\\npO3X5h8lZL8z9AfWx+8TuLEvB4oMsqnfFjAR4M8yPzfmhzwtgMJQfT9fvwuIGEbxskGG+TDJ\\nTT/D6nd2Vuc8guyjEqYNzCvO8edkKkTW1d21PAWI9Gd51IdBRl5hQGNb8TGRnO2uxKPXUNQU\\nc9ylAtG2MRjw4vYohsEPPHHdKNbw2/J+z0ce9xU7FBlLKhQRG5oVdslTaxKhyU1hKlxgZxok\\nboPQSHhfuTp44RPCvmC5cntEcSNZJ+wRn+AcUb7+Zhe/2Q7P77SUgxQB0zxWGND+2S3lJVug\\n/53B0S6uVV5B";\n            }\n        }\n        authgroup default;\n        device-type {\n            cli {\n                ned-id cisco-ios;\n            }\n        }\n        state {\n            admin-state unlocked;\n        }\n    }\n    device c1 {\n        address   127.0.0.1;\n        port      10023;\n        ssh {\n            host-key ssh-rsa {\n                key-data "AAAAB3NzaC1yc2EAAAADAQABAAABAQCcZFjOeQHj0mrs1D7VYn5PKaIRzALhXfZ59QuOhwdI\\npO3X5h8lZL8z9AfWx+8TuLEvB4oMsqnfFjAR4M8yPzfmhzwtgMJQfT9fvwuIGEbxskGG+TDJ\\nTT/D6nd2Vuc8guyjEqYNzCvO8edkKkTW1d21PAWI9Gd51IdBRl5hQGNb8TGRnO2uxKPXUNQU\\nc9ylAtG2MRjw4vYohsEPPHHdKNbw2/J+z0ce9xU7FBlLKhQRG5oVdslTaxKhyU1hKlxgZxok\\nboPQSHhfuTp44RPCvmC5cntEcSNZJ+wRn+AcUb7+Zhe/2Q7P77SUgxQB0zxWGND+2S3lJVug\\n/53B0S6uVV5B";\n            }\n        }\n        authgroup default;\n        device-type {\n            cli {\n                ned-id cisco-ios;\n            }\n        }\n        state {\n            admin-state unlocked;\n        }\n    }\n    device ios3 {\n        address   127.0.0.1;\n        port      10022;\n        authgroup default;\n        device-type {\n            cli {\n                ned-id cisco-ios-xr;\n            }\n        }\n        state {\n            admin-state unlocked;\n        }\n    }\n}\n'</msg>
-<msg level="INFO" timestamp="20200812 09:51:57.139">${config} = devices {
-    global-settings {
-        trace-dir /var/log/ncs;
-    }
-    authgroups {
-        group default {
-            default-map {
-                remote-name     admin;
-                remote-p...</msg>
-<status endtime="20200812 09:51:57.134" starttime="20200812 09:51:56.781" status="PASS"></status>
-</kw>
-<kw type="kw" name="BuiltIn.Log To Console">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${config}</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.153">Arguments: [ u'devices {\n    global-settings {\n        trace-dir /var/log/ncs;\n    }\n    authgroups {\n        group default {\n            default-map {\n                remote-name     admin;\n                remote-password $8$ahuIeC3+kx4JiQwtN8tsL5IFiyET6I5asUBqcFWb4/w=;\n            }\n        }\n    }\n    mib-group snmp {\n        mib-module [ SNMP* ];\n    }\n    device c0 {\n        address   127.0.0.1;\n        port      10022;\n        ssh {\n            host-key ssh-rsa {\n                key-data "AAAAB3NzaC1yc2EAAAADAQABAAABAQCcZFjOeQHj0mrs1D7VYn5PKaIRzALhXfZ59QuOhwdI\\npO3X5h8lZL8z9AfWx+8TuLEvB4oMsqnfFjAR4M8yPzfmhzwtgMJQfT9fvwuIGEbxskGG+TDJ\\nTT/D6nd2Vuc8guyjEqYNzCvO8edkKkTW1d21PAWI9Gd51IdBRl5hQGNb8TGRnO2uxKPXUNQU\\nc9ylAtG2MRjw4vYohsEPPHHdKNbw2/J+z0ce9xU7FBlLKhQRG5oVdslTaxKhyU1hKlxgZxok\\nboPQSHhfuTp44RPCvmC5cntEcSNZJ+wRn+AcUb7+Zhe/2Q7P77SUgxQB0zxWGND+2S3lJVug\\n/53B0S6uVV5B";\n            }\n        }\n        authgroup default;\n        device-type {\n            cli {\n                ned-id cisco-ios;\n            }\n        }\n        state {\n            admin-state unlocked;\n        }\n    }\n    device c1 {\n        address   127.0.0.1;\n        port      10023;\n        ssh {\n            host-key ssh-rsa {\n                key-data "AAAAB3NzaC1yc2EAAAADAQABAAABAQCcZFjOeQHj0mrs1D7VYn5PKaIRzALhXfZ59QuOhwdI\\npO3X5h8lZL8z9AfWx+8TuLEvB4oMsqnfFjAR4M8yPzfmhzwtgMJQfT9fvwuIGEbxskGG+TDJ\\nTT/D6nd2Vuc8guyjEqYNzCvO8edkKkTW1d21PAWI9Gd51IdBRl5hQGNb8TGRnO2uxKPXUNQU\\nc9ylAtG2MRjw4vYohsEPPHHdKNbw2/J+z0ce9xU7FBlLKhQRG5oVdslTaxKhyU1hKlxgZxok\\nboPQSHhfuTp44RPCvmC5cntEcSNZJ+wRn+AcUb7+Zhe/2Q7P77SUgxQB0zxWGND+2S3lJVug\\n/53B0S6uVV5B";\n            }\n        }\n        authgroup default;\n        device-type {\n            cli {\n                ned-id cisco-ios;\n            }\n        }\n        state {\n            admin-state unlocked;\n        }\n    }\n    device ios3 {\n        address   127.0.0.1;\n        port      10022;\n        authgroup default;\n        device-type {\n            cli {\n                ned-id cisco-ios-xr;\n            }\n        }\n        state {\n            admin-state unlocked;\n        }\n    }\n}\n' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.169">Return: None</msg>
-<status endtime="20200812 09:51:57.169" starttime="20200812 09:51:57.143" status="PASS"></status>
-</kw>
-<msg level="TRACE" timestamp="20200812 09:51:57.171">Return: None</msg>
-<status endtime="20200812 09:51:57.171" starttime="20200812 09:51:56.777" status="PASS"></status>
-</kw>
-<kw type="kw" name="Load Data">
-<doc></doc>
-<arguments>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.176">Arguments: [  ]</msg>
-<kw type="kw" name="com.apaulin.nso_controller.NSOController.Load">
-<doc></doc>
-<arguments>
-<arg>/devices</arg>
-<arg>target/test-classes/device.json</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.178">Arguments: [ u'/devices' | u'target/test-classes/device.json' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.191">Return: u'{}'</msg>
-<status endtime="20200812 09:51:57.190" starttime="20200812 09:51:57.177" status="PASS"></status>
-</kw>
-<kw type="kw" name="${out} = com.apaulin.nso_controller.NSOController.Dry Run">
-<doc></doc>
-<arguments>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.194">Arguments: [  ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.237">Return: u'{}'</msg>
-<msg level="INFO" timestamp="20200812 09:51:57.239">${out} = {}</msg>
-<status endtime="20200812 09:51:57.237" starttime="20200812 09:51:57.193" status="PASS"></status>
-</kw>
-<kw type="kw" name="BuiltIn.Log To Console">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${out}</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.242">Arguments: [ u'{}' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.243">Return: None</msg>
-<status endtime="20200812 09:51:57.243" starttime="20200812 09:51:57.240" status="PASS"></status>
-</kw>
-<msg level="TRACE" timestamp="20200812 09:51:57.245">Return: None</msg>
-<status endtime="20200812 09:51:57.245" starttime="20200812 09:51:57.173" status="PASS"></status>
-</kw>
-<kw type="kw" name="Show Schema">
-<doc></doc>
-<arguments>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.247">Arguments: [  ]</msg>
-<kw type="kw" name="${schema} = com.apaulin.nso_controller.NSOController.Get Model">
-<doc></doc>
-<arguments>
-<arg>/aaa/authentication/users/user</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.249">Arguments: [ u'/aaa/authentication/users/user' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.261">Return: u'{"data":{"min_elements":0,"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"children":[{"access":{"read":true,"create":false,"update":false,"delete":false,"execute":false},"kind":"key","qname":"aaa:name","name":"name","type":{"primitive":true,"name":"string"},"mandatory":true,"info":{"string":"Login name of the user"}},{"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"kind":"leaf","qname":"aaa:uid","name":"uid","type":{"primitive":true,"name":"int32"},"mandatory":true,"info":{"string":"User Identifier"}},{"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"kind":"leaf","qname":"aaa:gid","name":"gid","type":{"primitive":true,"name":"int32"},"mandatory":true,"info":{"string":"Group Identifier"}},{"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"kind":"leaf","qname":"aaa:password","name":"password","type":{"namespace":"http:\\/\\/tail-f.com\\/ns\\/aaa\\/1.1","name":"passwdStr"},"mandatory":true,"suppress_echo":true},{"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"kind":"leaf","qname":"aaa:ssh_keydir","name":"ssh_keydir","type":{"primitive":true,"name":"string"},"mandatory":true,"info":{"string":"Absolute path to directory where user\'s ssh keys\\nmay be found"}},{"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"kind":"leaf","qname":"aaa:homedir","name":"homedir","type":{"primitive":true,"name":"string"},"mandatory":true,"info":{"string":"Absolute path to user\'s home directory"}},{"access":{"read":false,"create":false,"update":false,"delete":false,"execute":true},"children":[{"access":{"read":false,"create":false,"update":true,"delete":false,"execute":false},"kind":"leaf","is_action_input":true,"qname":"aaa:old-password","name":"old-password","type":{"primitive":true,"name":"string"},"mandatory":true,"info":{"string":"Old password"},"suppress_echo":true},{"access":{"read":false,"create":false,"update":true,"delete":false,"execute":false},"kind":"leaf","is_action_input":true,"qname":"aaa:new-password","name":"new-password","type":{"primitive":true,"name":"string"},"mandatory":true,"info":{"string":"New password"},"suppress_echo":true},{"access":{"read":false,"create":false,"update":true,"delete":false,"execute":false},"kind":"leaf","is_action_input":true,"qname":"aaa:confirm-password","name":"confirm-password","type":{"primitive":true,"name":"string"},"mandatory":true,"info":{"string":"Confirm New password"},"suppress_echo":true}],"kind":"action","qname":"aaa:change-password","name":"change-password","mandatory":true,"info":{"string":"Request password change"}}],"kind":"list","qname":"aaa:user","name":"user","max_elements":"unbounded","mandatory":true,"key":["name"]},"meta":{"types":{"http:\\/\\/tail-f.com\\/ns\\/aaa\\/1.1:passwdStr":[{"name":"http:\\/\\/tail-f.com\\/ns\\/aaa\\/1.1:passwdStr"},{"name":"urn:ietf:params:xml:ns:yang:iana-crypt-hash:crypt-hash"},{"name":"cryptHash"}]},"keypath":"\\/aaa:aaa\\/authentication\\/users\\/user","prefix":"aaa","namespace":"http:\\/\\/tail-f.com\\/ns\\/aaa\\/1.1"}}'</msg>
-<msg level="INFO" timestamp="20200812 09:51:57.265">${schema} = {"data":{"min_elements":0,"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"children":[{"access":{"read":true,"create":false,"update":false,"delete":false,"execute":fal...</msg>
-<status endtime="20200812 09:51:57.261" starttime="20200812 09:51:57.248" status="PASS"></status>
-</kw>
-<kw type="kw" name="BuiltIn.Log To Console">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${schema}</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.269">Arguments: [ u'{"data":{"min_elements":0,"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"children":[{"access":{"read":true,"create":false,"update":false,"delete":false,"execute":false},"kind":"key","qname":"aaa:name","name":"name","type":{"primitive":true,"name":"string"},"mandatory":true,"info":{"string":"Login name of the user"}},{"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"kind":"leaf","qname":"aaa:uid","name":"uid","type":{"primitive":true,"name":"int32"},"mandatory":true,"info":{"string":"User Identifier"}},{"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"kind":"leaf","qname":"aaa:gid","name":"gid","type":{"primitive":true,"name":"int32"},"mandatory":true,"info":{"string":"Group Identifier"}},{"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"kind":"leaf","qname":"aaa:password","name":"password","type":{"namespace":"http:\\/\\/tail-f.com\\/ns\\/aaa\\/1.1","name":"passwdStr"},"mandatory":true,"suppress_echo":true},{"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"kind":"leaf","qname":"aaa:ssh_keydir","name":"ssh_keydir","type":{"primitive":true,"name":"string"},"mandatory":true,"info":{"string":"Absolute path to directory where user\'s ssh keys\\nmay be found"}},{"access":{"read":true,"create":true,"update":true,"delete":true,"execute":false},"kind":"leaf","qname":"aaa:homedir","name":"homedir","type":{"primitive":true,"name":"string"},"mandatory":true,"info":{"string":"Absolute path to user\'s home directory"}},{"access":{"read":false,"create":false,"update":false,"delete":false,"execute":true},"children":[{"access":{"read":false,"create":false,"update":true,"delete":false,"execute":false},"kind":"leaf","is_action_input":true,"qname":"aaa:old-password","name":"old-password","type":{"primitive":true,"name":"string"},"mandatory":true,"info":{"string":"Old password"},"suppress_echo":true},{"access":{"read":false,"create":false,"update":true,"delete":false,"execute":false},"kind":"leaf","is_action_input":true,"qname":"aaa:new-password","name":"new-password","type":{"primitive":true,"name":"string"},"mandatory":true,"info":{"string":"New password"},"suppress_echo":true},{"access":{"read":false,"create":false,"update":true,"delete":false,"execute":false},"kind":"leaf","is_action_input":true,"qname":"aaa:confirm-password","name":"confirm-password","type":{"primitive":true,"name":"string"},"mandatory":true,"info":{"string":"Confirm New password"},"suppress_echo":true}],"kind":"action","qname":"aaa:change-password","name":"change-password","mandatory":true,"info":{"string":"Request password change"}}],"kind":"list","qname":"aaa:user","name":"user","max_elements":"unbounded","mandatory":true,"key":["name"]},"meta":{"types":{"http:\\/\\/tail-f.com\\/ns\\/aaa\\/1.1:passwdStr":[{"name":"http:\\/\\/tail-f.com\\/ns\\/aaa\\/1.1:passwdStr"},{"name":"urn:ietf:params:xml:ns:yang:iana-crypt-hash:crypt-hash"},{"name":"cryptHash"}]},"keypath":"\\/aaa:aaa\\/authentication\\/users\\/user","prefix":"aaa","namespace":"http:\\/\\/tail-f.com\\/ns\\/aaa\\/1.1"}}' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.277">Return: None</msg>
-<status endtime="20200812 09:51:57.276" starttime="20200812 09:51:57.267" status="PASS"></status>
-</kw>
-<msg level="TRACE" timestamp="20200812 09:51:57.278">Return: None</msg>
-<status endtime="20200812 09:51:57.278" starttime="20200812 09:51:57.246" status="PASS"></status>
-</kw>
-<kw type="kw" name="Create User">
-<doc></doc>
-<arguments>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.281">Arguments: [  ]</msg>
-<kw type="kw" name="com.apaulin.nso_controller.NSOController.Create">
-<doc></doc>
-<arguments>
-<arg>/aaa/authentication/users/user{test3}</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.284">Arguments: [ u'/aaa/authentication/users/user{test3}' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.296">Return: u'{}'</msg>
-<status endtime="20200812 09:51:57.295" starttime="20200812 09:51:57.282" status="PASS"></status>
-</kw>
-<kw type="kw" name="com.apaulin.nso_controller.NSOController.Set Value">
-<doc></doc>
-<arguments>
-<arg>/aaa/authentication/users/user{test3}/uid</arg>
-<arg>5</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.298">Arguments: [ u'/aaa/authentication/users/user{test3}/uid' | u'5' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.310">Return: u'{}'</msg>
-<status endtime="20200812 09:51:57.310" starttime="20200812 09:51:57.297" status="PASS"></status>
-</kw>
-<kw type="kw" name="com.apaulin.nso_controller.NSOController.Set Value">
-<doc></doc>
-<arguments>
-<arg>/aaa/authentication/users/user{test3}/gid</arg>
-<arg>5</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.314">Arguments: [ u'/aaa/authentication/users/user{test3}/gid' | u'5' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.321">Return: u'{}'</msg>
-<status endtime="20200812 09:51:57.320" starttime="20200812 09:51:57.312" status="PASS"></status>
-</kw>
-<kw type="kw" name="com.apaulin.nso_controller.NSOController.Set Value">
-<doc></doc>
-<arguments>
-<arg>/aaa/authentication/users/user{test3}/password</arg>
-<arg>cisco</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.324">Arguments: [ u'/aaa/authentication/users/user{test3}/password' | u'cisco' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.360">Return: u'{}'</msg>
-<status endtime="20200812 09:51:57.360" starttime="20200812 09:51:57.322" status="PASS"></status>
-</kw>
-<kw type="kw" name="com.apaulin.nso_controller.NSOController.Set Value">
-<doc></doc>
-<arguments>
-<arg>/aaa/authentication/users/user{test3}/ssh_keydir</arg>
-<arg>/home/test3/.ssh</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.362">Arguments: [ u'/aaa/authentication/users/user{test3}/ssh_keydir' | u'/home/test3/.ssh' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.367">Return: u'{}'</msg>
-<status endtime="20200812 09:51:57.367" starttime="20200812 09:51:57.361" status="PASS"></status>
-</kw>
-<kw type="kw" name="com.apaulin.nso_controller.NSOController.Set Value">
-<doc></doc>
-<arguments>
-<arg>/aaa/authentication/users/user{test3}/homedir</arg>
-<arg>/home/test3</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.371">Arguments: [ u'/aaa/authentication/users/user{test3}/homedir' | u'/home/test3' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.378">Return: u'{}'</msg>
-<status endtime="20200812 09:51:57.378" starttime="20200812 09:51:57.369" status="PASS"></status>
-</kw>
-<kw type="kw" name="com.apaulin.nso_controller.NSOController.Commit">
-<doc></doc>
-<arguments>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.380">Arguments: [  ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.417">Return: u'{}'</msg>
-<status endtime="20200812 09:51:57.417" starttime="20200812 09:51:57.379" status="PASS"></status>
-</kw>
-<msg level="TRACE" timestamp="20200812 09:51:57.419">Return: None</msg>
-<status endtime="20200812 09:51:57.418" starttime="20200812 09:51:57.279" status="PASS"></status>
-</kw>
-<kw type="kw" name="List Keys">
-<doc></doc>
-<arguments>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.421">Arguments: [  ]</msg>
-<kw type="kw" name="${list_key} = com.apaulin.nso_controller.NSOController.Get List Keys">
-<doc></doc>
-<arguments>
-<arg>/aaa/authentication/users/user</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.423">Arguments: [ u'/aaa/authentication/users/user' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.450">Return: u'{"keys":[["test3"]],"total_count":1,"lh":-1}'</msg>
-<msg level="INFO" timestamp="20200812 09:51:57.451">${list_key} = {"keys":[["test3"]],"total_count":1,"lh":-1}</msg>
-<status endtime="20200812 09:51:57.450" starttime="20200812 09:51:57.422" status="PASS"></status>
-</kw>
-<kw type="kw" name="BuiltIn.Log To Console">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${list_key}</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.453">Arguments: [ u'{"keys":[["test3"]],"total_count":1,"lh":-1}' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.455">Return: None</msg>
-<status endtime="20200812 09:51:57.455" starttime="20200812 09:51:57.452" status="PASS"></status>
-</kw>
-<msg level="TRACE" timestamp="20200812 09:51:57.456">Return: None</msg>
-<status endtime="20200812 09:51:57.456" starttime="20200812 09:51:57.420" status="PASS"></status>
-</kw>
-<kw type="kw" name="Delete User">
-<doc></doc>
-<arguments>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.461">Arguments: [  ]</msg>
-<kw type="kw" name="com.apaulin.nso_controller.NSOController.Delete">
-<doc></doc>
-<arguments>
-<arg>/aaa/authentication/users/user{test3}</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.463">Arguments: [ u'/aaa/authentication/users/user{test3}' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.473">Return: u'{}'</msg>
-<status endtime="20200812 09:51:57.473" starttime="20200812 09:51:57.462" status="PASS"></status>
-</kw>
-<kw type="kw" name="${out} = com.apaulin.nso_controller.NSOController.Dry Run">
-<doc></doc>
-<arguments>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.475">Arguments: [  ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.512">Return: u' aaa {\n     authentication {\n         users {\n-            user test3 {\n-                uid 5;\n-                gid 5;\n-                password $6$/9vLkgyygh0H7SwW$SakTW4/hCNBD83jixWxgUvyIy1QTEnY3IRdSwBlPYlEYCDrhKQ.doXWgPWSOViVT8n583aqcHchZbcacn.l0T1;\n-                ssh_keydir /home/test3/.ssh;\n-                homedir /home/test3;\n-            }\n         }\n     }\n }\n'</msg>
-<msg level="INFO" timestamp="20200812 09:51:57.515">${out} =  aaa {
-     authentication {
-         users {
--            user test3 {
--                uid 5;
--                gid 5;
--                password $6$/9vLkgyygh0H7SwW$SakTW4/hCNBD83jixWxgUvyIy1QTEnY3IR...</msg>
-<status endtime="20200812 09:51:57.510" starttime="20200812 09:51:57.474" status="PASS"></status>
-</kw>
-<kw type="kw" name="BuiltIn.Log To Console">
-<doc>Logs the given message to the console.</doc>
-<arguments>
-<arg>${out}</arg>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.518">Arguments: [ u' aaa {\n     authentication {\n         users {\n-            user test3 {\n-                uid 5;\n-                gid 5;\n-                password $6$/9vLkgyygh0H7SwW$SakTW4/hCNBD83jixWxgUvyIy1QTEnY3IRdSwBlPYlEYCDrhKQ.doXWgPWSOViVT8n583aqcHchZbcacn.l0T1;\n-                ssh_keydir /home/test3/.ssh;\n-                homedir /home/test3;\n-            }\n         }\n     }\n }\n' ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.522">Return: None</msg>
-<status endtime="20200812 09:51:57.521" starttime="20200812 09:51:57.517" status="PASS"></status>
-</kw>
-<kw type="kw" name="com.apaulin.nso_controller.NSOController.Commit">
-<doc></doc>
-<arguments>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.524">Arguments: [  ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:57.559">Return: u'{}'</msg>
-<status endtime="20200812 09:51:57.558" starttime="20200812 09:51:57.523" status="PASS"></status>
-</kw>
-<msg level="TRACE" timestamp="20200812 09:51:57.561">Return: None</msg>
-<status endtime="20200812 09:51:57.560" starttime="20200812 09:51:57.457" status="PASS"></status>
-</kw>
-<kw type="kw" name="com.apaulin.nso_controller.NSOController.Sync From">
-<doc></doc>
-<arguments>
-</arguments>
-<msg level="TRACE" timestamp="20200812 09:51:57.563">Arguments: [  ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:58.909">Return: u'c0:false\nc1:false\nios3:false\n'</msg>
-<status endtime="20200812 09:51:58.909" starttime="20200812 09:51:57.562" status="PASS"></status>
-</kw>
 <doc></doc>
 <tags>
 </tags>
-<status critical="yes" endtime="20200812 09:51:58.910" starttime="20200812 09:51:56.756" status="PASS"></status>
+<status critical="yes" endtime="20210629 15:13:21.169" starttime="20210629 15:13:21.158" status="FAIL">Parent suite setup failed:
+NSOException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused</status>
 </test>
 <kw type="teardown" name="com.apaulin.nso_controller.NSOController.Logout">
 <doc></doc>
 <arguments>
 </arguments>
-<msg level="TRACE" timestamp="20200812 09:51:58.915">Arguments: [  ]</msg>
-<msg level="TRACE" timestamp="20200812 09:51:58.925">Return: u'{}'</msg>
-<status endtime="20200812 09:51:58.925" starttime="20200812 09:51:58.915" status="PASS"></status>
+<status endtime="20210629 15:13:21.189" starttime="20210629 15:13:21.184" status="PASS"></status>
 </kw>
 <doc>NSO controller test quickstart</doc>
 <metadata>
 <item name="Version">1.0</item>
 </metadata>
-<status endtime="20200812 09:51:58.926" starttime="20200812 09:51:54.432" status="PASS"></status>
+<status endtime="20210629 15:13:21.196" starttime="20210629 15:13:18.535" status="FAIL">Suite setup failed:
+NSOException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused</status>
+</suite>
+<suite source="/home/apaulin/eclipse-workspace/project-testsuite/src/test/robotframework/acceptance/Sessions.robot" name="Sessions" id="s1-s2">
+<kw type="setup" name="Start Session">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="com.apaulin.nso_controller.NSOController.Init">
+<doc></doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<msg level="FAIL" timestamp="20210629 15:13:21.395">NSOException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused</msg>
+<status endtime="20210629 15:13:21.398" starttime="20210629 15:13:21.335" status="FAIL"></status>
+</kw>
+<status endtime="20210629 15:13:21.402" starttime="20210629 15:13:21.323" status="FAIL"></status>
+</kw>
+<test name="Sessions" id="s1-s2-t1">
+<doc></doc>
+<tags>
+</tags>
+<status critical="yes" endtime="20210629 15:13:21.416" starttime="20210629 15:13:21.405" status="FAIL">Parent suite setup failed:
+NSOException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused</status>
+</test>
+<doc>NSO controller Logout examples</doc>
+<metadata>
+<item name="Version">1.0</item>
+</metadata>
+<status endtime="20210629 15:13:21.425" starttime="20210629 15:13:21.213" status="FAIL">Suite setup failed:
+NSOException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused</status>
 </suite>
 <doc></doc>
 <metadata>
 </metadata>
-<status endtime="20200812 09:51:58.941" starttime="20200812 09:51:54.048" status="PASS"></status>
+<status endtime="20210629 15:13:21.441" starttime="20210629 15:13:17.503" status="FAIL"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0">Critical Tests</stat>
-<stat pass="1" fail="0">All Tests</stat>
+<stat pass="0" fail="2">Critical Tests</stat>
+<stat pass="0" fail="2">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" name="Acceptance" id="s1">Acceptance</stat>
-<stat pass="1" fail="0" name="Quickstart" id="s1-s1">Acceptance.Quickstart</stat>
+<stat pass="0" fail="2" name="Acceptance" id="s1">Acceptance</stat>
+<stat pass="0" fail="1" name="Quickstart" id="s1-s1">Acceptance.Quickstart</stat>
+<stat pass="0" fail="1" name="Sessions" id="s1-s2">Acceptance.Sessions</stat>
 </suite>
 </statistics>
 <errors>

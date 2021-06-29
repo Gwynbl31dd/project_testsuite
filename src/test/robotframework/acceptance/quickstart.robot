@@ -17,14 +17,14 @@ Suite TearDown   Logout
 *** Test Cases ***
 
 Quickstart API
-    Set Log level  trace
-    Show devices config
-    Load Data
-    Show Schema
-    Create User
-    List Keys
-    Delete User
-    Sync From
+    #Set Log level  trace
+    #Show devices config
+    #Load Data
+   # Show Schema
+    #Create User
+   # List Keys
+   # Delete User
+  #  Sync From
     
 *** Keywords ***
 
