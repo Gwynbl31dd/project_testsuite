@@ -5,45 +5,40 @@ ${PASSWORD}  cisco123
 
 *** Setting ***
 Documentation     
-...    NSO controller test quickstart 
+...    NSO controller Tests
 
 Metadata    Version            1.0
 
 Library   com.apaulin.nso_controller.NSOController
 
-Suite Setup      Start Session
-Suite TearDown   Logout
+Test Setup      Start Session
+Test TearDown   Logout
 
 *** Test Cases ***
 
-Quickstart API
-    #Set Log level  trace
-    #Show devices config
-    #Load Data
-   # Show Schema
-    #Create User
-   # List Keys
-   # Delete User
-  #  Sync From
+Users
+    Create User
+    List Keys
+    Delete User
     
-*** Keywords ***
-
+Schema
+	${schema}  Get Model  /aaa/authentication/users/user
+    Log To Console  ${schema}
+    
+Show devices config
+    ${config}   Show config   /devices
+    Log To Console  ${config
+    
 Load Data
     Load  /devices  target/test-classes/device.json
     ${out}  Dry Run
     Log To Console  ${out}
+
+*** Keywords ***
     
 Start Session
-    Init   ${URL}  ${USERNAME}  ${PASSWORD} 
+	Init   ${URL}  ${USERNAME}  ${PASSWORD} 
     Start Transaction  running  read_write  private  test  reuse
-    
-Show devices config
-    ${config}   Show config   /devices
-    Log To Console  ${config}
-    
-Show Schema
-    ${schema}  Get Model  /aaa/authentication/users/user
-    Log To Console  ${schema}
     
 Create User
     Create     /aaa/authentication/users/user{test3}
@@ -63,5 +58,3 @@ Delete User
     ${out}  Dry Run
     Log To Console  ${out}
     Commit
-    
-  

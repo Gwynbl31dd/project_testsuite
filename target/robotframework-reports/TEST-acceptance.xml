@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite failures="2" skip="0" tests="2" name="Acceptance" errors="0">
-<testcase classname="Acceptance.Quickstart" name="Quickstart API" time="0">
-<failure message="Parent suite setup failed:&#10;NSOException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused" type="AssertionError"></failure>
-</testcase>
-<testcase classname="Acceptance.Sessions" name="Sessions" time="0">
-<failure message="Parent suite setup failed:&#10;NSOException: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:8080 [/127.0.0.1] failed: Connection refused" type="AssertionError"></failure>
-</testcase>
-</testsuite>

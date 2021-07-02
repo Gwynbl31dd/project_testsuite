@@ -24,13 +24,9 @@ Sessions
 Start Session
     Init   ${URL}  ${USERNAME}  ${PASSWORD} 
     Start Transaction  running  read_write  private  test  reuse
-    Logout
     
 Show something
     Start Session
     ${config}   Show config   /aaa
     Log To Console  ${config}
     Logout
-
-    
-  
