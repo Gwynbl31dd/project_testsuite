@@ -6,7 +6,7 @@ No need to install any extra dependency... maven will handle it.
 
 ## Usage
 
-The installation is easy (2-3 commands)
+The installation is easy, 2 commands.
 
 Simply clone this repository
 
@@ -48,4 +48,8 @@ E.g : Add selenium
 </dependency>
 ```
 
-Easy ;)
+## Resources 
+
+You can load resource. In this example, a device.json file.
+
+The resources saved in ``src/test/resources`` can be accessible from ``target/test-classes/``
