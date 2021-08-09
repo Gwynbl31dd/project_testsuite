@@ -1,7 +1,7 @@
 *** Variables ***
-${URL}  http://127.0.0.1:8080
+${URL}  http://127.0.0.1:80
 ${USERNAME}  admin
-${PASSWORD}  cisco123
+${PASSWORD}  admin
 
 *** Setting ***
 Documentation     
