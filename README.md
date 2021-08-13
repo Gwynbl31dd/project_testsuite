@@ -48,6 +48,23 @@ E.g : Add selenium
 </dependency>
 ```
 
+## Docker
+
+### Build
+
+Build the image
+
+```bash
+docker build -t apaulin/maven-robot:latest .
+```
+
+Run the image
+
+```
+docker run -itd --name maven-robot apaulin/maven-robot:latest
+```
+
+
 ## Resources 
 
 You can load resource. In this example, a device.json file.
