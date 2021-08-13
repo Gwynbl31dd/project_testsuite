@@ -17,7 +17,39 @@
 			<artifactId>nso_controller</artifactId>
 			<version>4.4.3</version>
 		</dependency>
+		<dependency>
+			<groupId>com.github.marketsquare</groupId>
+			<artifactId>robotframework-httprequestlibrary</artifactId>
+			<version>0.0.17</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.github.hi-fi/robotframework-seleniumlibrary -->
+		<dependency>
+			<groupId>com.github.hi-fi</groupId>
+			<artifactId>robotframework-seleniumlibrary</artifactId>
+			<version>3.141.59.26535</version>
+		</dependency>
 	</dependencies>
+
+	<repositories>
+		<repository>
+			<id>central</id>
+			<url>https://repo1.maven.org/maven2</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>github</id>
+			<url>https://maven.pkg.github.com/Gwynbl31dd/*</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
