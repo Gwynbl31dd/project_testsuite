@@ -30,6 +30,8 @@ mvn integration-test
 
 Github requires an authorization token... This is not perfect. But easy to fix. I provide a public auth token with read access to the packages in ``settings.xml`` you can copy it to ~/.m2/settings.xml .
 
+NOTE: If the token has been revoked. Just send me an email at paulin.anthony@gmail.com or apaulin@cisco.com
+
 ```xml
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
